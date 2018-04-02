@@ -7,6 +7,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -57,7 +58,10 @@ public class MainActivity extends AppCompatActivity {
                 }
 
 //                mengeset adapter untukListView
-                mListMahasiswa.setAdapter(new ArrayAdapter(MainActivity.this, android.R.layout.simple_list_item_1, hasil));
+                ArrayAdapter adapter = new ArrayAdapter(MainActivity.this,
+                        android.R.layout.simple_list_item_1, hasil);
+
+                mListMahasiswa.setAdapter(adapter);
 
             }
         });
